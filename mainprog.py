@@ -8,8 +8,13 @@ subnet = 0
 octetnI = 0
 wildcard = 0 
 variation = 0 
+root2 = None
 
 def check():
+	global root2
+	if root2:
+		root2.destroy()
+
 	root2 = Tk()
 	root2.title('Generated Answer')
 	banner = Label(root2,text = "SUBNETTING ANSWER")
@@ -50,6 +55,8 @@ def check():
 	close_button.grid(row = 4, columnspan = 4)
 
 	root2.mainloop()
+	root2 = None
+
 
 def generate_option():
 
@@ -57,6 +64,10 @@ def generate_option():
 	global subnet
 	global octetnI
 	global wildcard
+	global root2
+
+	if root2:
+		root2.destroy()
 
 	number = random.randint(1,32)
 	contiguios = [255,128,192,224,240,248,252,254,255]
@@ -126,6 +137,7 @@ def generate_option():
 		octetnI_entry.insert(0,octetnI)
 		wildcard_entry.insert(0,wildcard)
 
+	root2 = None
 	return number
 
 
