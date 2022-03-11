@@ -12,4 +12,4 @@ then click the GENERATE button to give you options to answer
 
 then click the CHECK button to see the right answers
 
-![image](https://user-images.githubusercontent.com/78094177/157508142-8d568927-a04f-4582-b68b-e3e48cdc18bb.png)
+
